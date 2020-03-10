@@ -25,7 +25,7 @@ cur = con.cursor()
 con.execute("DROP TABLE IF EXISTS kvr")
 con.execute("CREATE TABLE kvr(title text, price INT, tipe text, adress text, time text, href text, tel text)")
 
-for page in range(1,total_pages_words):
+for page in range(1,total_pages_words-81):
 
     url = str(prefiks_norm+BASE_URL + "?p=%d" % page)
     fun.parse(fun.get_html(url, headers_n),data)
